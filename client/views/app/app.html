@@ -1,0 +1,15 @@
+<template name="app">
+    {{>sAlert}}
+    {{#if queriesLength}}
+        {{>queries}}
+    {{/if}}
+
+    {{>search}}
+    {{>map}}
+
+    {{#if venuesLength}}
+        {{>venues}}
+    {{/if}}
+
+    {{>footer}}
+</template>

@@ -1,0 +1,30 @@
+<template name="queries">
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <td>Delete</td>
+                <td>Place</td>
+                <td>Latitude</td>
+                <td>Longitude</td>
+                <td>Distance</td>
+                <td>Date</td>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each queries}}
+                <tr>
+                    {{#if ownsDocument}}
+                        <td><span class="glyphicon glyphicon-trash" id="delete"></span></td>
+                    {{else}}
+                        <td><span class="glyphicon glyphicon-lock"></span></td>
+                    {{/if}}
+                    <td>{{this.place}}</td>
+                    <td>{{this.latitude}}</td>
+                    <td>{{this.longtitude}}</td>
+                    <td>{{this.distance}}</td>
+                    <td>{{this.date}}</td>
+                </tr>
+            {{/each}}
+        </tbody>
+    </table>
+</template>

@@ -1,0 +1,26 @@
+<template name="venues">
+    <table class="table table-striped" id="venues">
+        <thead>
+        <tr>
+            <td>Name</td>
+            <td>City</td>
+            <td>Street</td>
+            <td>Latitude</td>
+            <td>Longitude</td>
+            <td>Distance</td>
+        </tr>
+        </thead>
+        <tbody>
+        {{#each venues}}
+        <tr>
+            <td>{{this.name}}</td>
+            <td>{{this.location.city}}</td>
+            <td>{{this.location.crossStreet}}</td>
+            <td>{{this.location.lat}}</td>
+            <td>{{this.location.lng}}</td>
+            <td>{{this.location.distance}}</td>
+        </tr>
+        {{/each}}
+        </tbody>
+    </table>
+</template>

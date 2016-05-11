@@ -1,0 +1,12 @@
+<template name="search">
+    <form class="form form-inline" id="search-form">
+        <input type="text" class="form-control" id="query" placeholder="What do you want to find?">
+        <input type="text" class="form-control" id="radius" placeholder="In which radius?">
+        <button type="submit" class="btn btn-default" id="submit-btn">
+            <span class="glyphicon glyphicon-search"></span>
+        </button>
+        {{#if venuesLength}}
+            {{>export}}
+        {{/if}}
+    </form>
+</template>
